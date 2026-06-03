@@ -1,13 +1,16 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PatternA — Strategic Perception Studio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -18,49 +21,85 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
-background:#ffffff;
-color:#111111;
-line-height:1.6;
+background:#fff;
+color:#111;
+-webkit-font-smoothing:antialiased;
+line-height:1.5;
 }
 
 .container{
-width:min(1100px,90%);
+width:min(1300px,92%);
 margin:auto;
 }
 
+nav{
+padding:30px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:.9rem;
+letter-spacing:3px;
+text-transform:uppercase;
+}
+
+.menu{
+display:flex;
+gap:32px;
+}
+
+.menu a{
+text-decoration:none;
+color:#555;
+font-size:.95rem;
+transition:.2s;
+}
+
+.menu a:hover{
+color:#111;
+}
+
 section{
-padding:120px 0;
+padding:180px 0;
 }
 
 .hero{
-min-height:100vh;
+min-height:90vh;
 display:flex;
 align-items:center;
+padding-top:60px;
 }
 
 .eyebrow{
 font-size:12px;
 letter-spacing:3px;
 text-transform:uppercase;
-color:#666;
-margin-bottom:24px;
+color:#777;
+margin-bottom:35px;
 }
 
 h1{
-font-size:clamp(3rem,8vw,7rem);
+font-size:clamp(5rem,11vw,10rem);
+line-height:.88;
+letter-spacing:-6px;
 font-weight:500;
-line-height:0.95;
-letter-spacing:-3px;
-margin-bottom:32px;
+max-width:1200px;
+margin-bottom:40px;
 }
 
 .subtitle{
-font-size:1.25rem;
-max-width:700px;
+font-size:1.4rem;
+max-width:850px;
 color:#444;
-margin-bottom:40px;
+margin-bottom:60px;
 }
 
 .buttons{
@@ -70,7 +109,7 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:14px 24px;
+padding:15px 28px;
 border:1px solid #111;
 text-decoration:none;
 color:#111;
@@ -84,7 +123,7 @@ color:#fff;
 
 .secondary{
 border-color:#ddd;
-color:#444;
+color:#555;
 }
 
 .secondary:hover{
@@ -92,83 +131,116 @@ background:#f5f5f5;
 color:#111;
 }
 
-.section-label{
+.label{
 font-size:12px;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#888;
-margin-bottom:24px;
+margin-bottom:20px;
 }
 
 h2{
-font-size:2.5rem;
+font-size:clamp(2.4rem,4vw,4rem);
 font-weight:500;
-margin-bottom:24px;
-letter-spacing:-1px;
+letter-spacing:-2px;
+margin-bottom:30px;
+max-width:1000px;
 }
 
-.large-text{
+.text{
 font-size:1.4rem;
-max-width:850px;
-color:#333;
+max-width:900px;
+color:#444;
+}
+
+.thesis{
+font-size:2rem;
+max-width:1000px;
+line-height:1.3;
+}
+
+.framework{
+margin-top:80px;
+}
+
+.framework-item{
+padding:28px 0;
+font-size:1.2rem;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-margin-top:60px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:60px;
+margin-top:70px;
 }
 
 .card h3{
-margin-bottom:12px;
-font-size:1.2rem;
+font-size:1.25rem;
+margin-bottom:15px;
 font-weight:500;
 }
 
 .card p{
-color:#666;
+color:#555;
 }
 
-.framework{
-display:grid;
-grid-template-columns:1fr;
-gap:24px;
-margin-top:50px;
-}
-
-.framework-item{
-padding:24px;
-border-top:1px solid #e5e5e5;
-font-size:1.1rem;
+.question{
+font-size:3rem;
+line-height:1.2;
+max-width:1000px;
 }
 
 .contact{
 text-align:center;
-padding-bottom:140px;
 }
 
-.contact a{
-color:#111;
-text-decoration:none;
-font-size:1.1rem;
+.contact-email{
+font-size:1.2rem;
+margin:30px 0 40px;
 }
 
 footer{
-padding:40px 0;
-border-top:1px solid #eee;
+padding:80px 0;
+}
+
+.footer-logo{
 font-size:.9rem;
-color:#888;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:15px;
+}
+
+.footer-text{
+color:#666;
 }
 
 @media(max-width:768px){
 
+.menu{
+display:none;
+}
+
 section{
-padding:80px 0;
+padding:100px 0;
+}
+
+.hero{
+min-height:auto;
 }
 
 h1{
-font-size:3.5rem;
+font-size:4.2rem;
+letter-spacing:-4px;
+}
+
+.subtitle,
+.text{
+font-size:1.1rem;
+}
+
+.question{
+font-size:2rem;
 }
 
 }
@@ -178,86 +250,110 @@ font-size:3.5rem;
 
 <body>
 
+<div class="container">
+
+<nav>
+
+<div class="logo">
+PATTERNA
+</div>
+
+<div class="menu">
+<a href="#framework">Framework</a>
+<a href="#capabilities">Capabilities</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+</div>
+
 <section class="hero">
+
 <div class="container">
 
 <div class="eyebrow">
-PATTERNA — STRATEGIC PERCEPTION STUDIO
+STRATEGIC PERCEPTION STUDIO
 </div>
 
 <h1>
-Perception<br>
-Shapes Positioning.
+La realidad de una organización está limitada por la forma en que se percibe a sí misma.
 </h1>
 
 <p class="subtitle">
-We help organizations, brands and leaders identify and transform the perceptual patterns that shape growth, differentiation and influence.
+Ayudamos a líderes, marcas y organizaciones a identificar los patrones invisibles que condicionan su posicionamiento, sus decisiones y sus posibilidades de crecimiento.
 </p>
 
 <div class="buttons">
-<a href="#framework" class="btn">Explore the Framework</a>
-<a href="#contact" class="btn secondary">Request a Diagnostic</a>
+<a href="#framework" class="btn">Explorar el Framework</a>
+<a href="#contact" class="btn secondary">Iniciar una Conversación</a>
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
-<div class="section-label">
-The Problem
+<div class="label">
+QUÉ OBSERVAMOS
 </div>
 
 <h2>
-Most organizations solve symptoms.
+La mayoría de las organizaciones intenta resolver problemas visibles.
 </h2>
 
-<p class="large-text">
-They focus on positioning, communication, culture, reputation and growth. We focus on the invisible patterns that generate them.
+<p class="text">
+Más ventas.
+Más posicionamiento.
+Más reputación.
+Más crecimiento.
+
+<br><br>
+
+Sin embargo, los síntomas rara vez son el problema.
+
+<br><br>
+
+Detrás de cada resultado existe una estructura perceptual que condiciona la forma en que una organización interpreta la realidad, toma decisiones y actúa.
 </p>
 
 </div>
+
 </section>
 
 <section>
+
 <div class="container">
 
-<div class="section-label">
-Capabilities
+<div class="label">
+NUESTRA TESIS
 </div>
 
-<h2>
-What we do.
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Strategic Positioning</h3>
-<p>Clarify competitive identity and unlock differentiation.</p>
-</div>
-
-<div class="card">
-<h3>Narrative Architecture</h3>
-<p>Design systems of meaning that shape perception.</p>
-</div>
-
-<div class="card">
-<h3>Perceptual Transformation</h3>
-<p>Transform organizational and cultural patterns.</p>
-</div>
+<p class="thesis">
+La percepción precede a la estrategia.
+<br><br>
+Toda estrategia emerge desde una forma particular de observar.
+<br><br>
+Toda narrativa emerge desde una forma particular de interpretar.
+<br><br>
+Toda cultura emerge desde una forma particular de significar.
+<br><br>
+Cuando la percepción cambia, las posibilidades cambian.
+</p>
 
 </div>
 
-</div>
 </section>
 
 <section id="framework">
+
 <div class="container">
 
-<div class="section-label">
-Framework
+<div class="label">
+FRAMEWORK
 </div>
 
 <h2>
@@ -267,56 +363,127 @@ Initial Perceptual Discovery Framework™
 <div class="framework">
 
 <div class="framework-item">
-01 — Cognitive Structures
+01 — Estructuras Cognitivas
 </div>
 
 <div class="framework-item">
-02 — Narrative Tensions
+02 — Tensiones Narrativas
 </div>
 
 <div class="framework-item">
-03 — Perceptual Contradictions
+03 — Contradicciones Perceptuales
 </div>
 
 <div class="framework-item">
-04 — Symbolic Patterns
+04 — Patrones Simbólicos
 </div>
 
 <div class="framework-item">
-05 — Transformation Potential
+05 — Potencial de Transformación
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<section class="contact" id="contact">
+<section id="capabilities">
+
 <div class="container">
 
-<div class="section-label">
-Contact
+<div class="label">
+CAPACIDADES
 </div>
 
 <h2>
-Start a Conversation
+Intervenciones orientadas a transformar percepción en ventaja estratégica.
 </h2>
 
-<p style="margin-bottom:30px;">
-hello@patterna.digital
+<div class="grid">
+
+<div class="card">
+<h3>Posicionamiento Estratégico</h3>
+<p>
+Claridad, diferenciación y significado.
+</p>
+</div>
+
+<div class="card">
+<h3>Arquitectura Narrativa</h3>
+<p>
+Diseño de sistemas de percepción y construcción de sentido.
+</p>
+</div>
+
+<div class="card">
+<h3>Transformación Perceptual</h3>
+<p>
+Intervenciones orientadas a modificar patrones organizacionales profundos.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+UNA PREGUNTA
+</div>
+
+<p class="question">
+¿Qué resultados dejarían de ser un problema si la percepción que los genera cambiara?
 </p>
 
-<a class="btn" href="mailto:hello@patterna.digital">
-Request a Diagnostic
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="label">
+CONTACTO
+</div>
+
+<h2>
+Iniciar una conversación estratégica
+</h2>
+
+<div class="contact-email">
+hello@patterna.digital
+</div>
+
+<a href="mailto:hello@patterna.digital" class="btn">
+Solicitar Diagnóstico
 </a>
 
 </div>
+
 </section>
 
 <footer>
+
 <div class="container">
-PatternA © 2026 — Strategic Perception Studio
+
+<div class="footer-logo">
+PATTERNA
 </div>
+
+<div class="footer-text">
+Strategic Perception Studio<br>
+© 2026
+</div>
+
+</div>
+
 </footer>
 
 </body>
